@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { ChartComponent } from './dashboard/chart/chart.component';
+import { TravelComponent } from './travel/travel.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ChartComponent } from './dashboard/chart/chart.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    ChartComponent
+    ChartComponent,
+    TravelComponent
   ],
   imports: [
     BrowserModule,
