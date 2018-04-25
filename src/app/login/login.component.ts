@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   user: any = {
 
   };
-  name: string = '';
+  
   len: boolean = false;
   letter: boolean = false;
   capital: boolean = false;
