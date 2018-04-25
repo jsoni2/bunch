@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   user: any = {
 
   };
-  
+
   len: boolean = false;
   letter: boolean = false;
   capital: boolean = false;
@@ -72,6 +72,12 @@ export class LoginComponent implements OnInit {
         this.symbol = false;
       }
 
+    } else{
+      this.len = false;
+      this.letter = false;
+      this.capital = false;
+      this.number = false;
+      this.symbol = false;
     }
   }
 }
