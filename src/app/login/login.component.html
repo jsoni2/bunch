@@ -1,0 +1,24 @@
+
+<div class="login-form">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <h2 class="text-center">Password Validator</h2>
+        <div class="form-group">
+            <input type="text" name="name" [(ngModel)]=user.name class="form-control" placeholder="Password" required="required">
+
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="name" [(ngModel)]=user.name (keyup)="onKey($event)"  class="form-control" placeholder="Password" required="required">
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input id="letter" name="letter" [(ngModel)]=letter type="checkbox"> At least <strong>one letter</strong></label><br>
+            <label class="pull-left checkbox-inline"><input id="capital" name="capital" [(ngModel)]=capital type="checkbox"> At least <strong>one capital letter</strong></label><br>
+            <label class="pull-left checkbox-inline"><input id="number" name="number" [(ngModel)]=number type="checkbox"> At least <strong>one number</strong></label><br>
+            <label class="pull-left checkbox-inline"><input id="length" name="len" [(ngModel)]=len type="checkbox"> Be at least <strong>8 characters</strong></label><br>
+            <label class="pull-left checkbox-inline"><input id="symbol" name="symbol" [(ngModel)]=symbol type="checkbox"> At least <strong>one symbol</strong></label><br>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>
+    </form>
+</div>
