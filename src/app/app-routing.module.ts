@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { TravelComponent } from './travel/travel.component';
 
 
 
@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+  },
+  {
+    path: 'travel',
+    component: TravelComponent,
   },
   {
     path: '',
