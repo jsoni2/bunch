@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { ChartComponent } from './dashboard/chart/chart.component';
 import { TravelComponent } from './travel/travel.component';
+import { FlightComponent } from './travel/flight/flight.component';
+import { HotelComponent } from './travel/hotel/hotel.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { TravelComponent } from './travel/travel.component';
     LoginComponent,
     DashboardComponent,
     ChartComponent,
-    TravelComponent
+    TravelComponent,
+    FlightComponent,
+    HotelComponent
   ],
   imports: [
     BrowserModule,
