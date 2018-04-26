@@ -6,12 +6,22 @@ import { LoginComponent } from './login/login.component';
 import { TravelComponent } from './travel/travel.component';
 import { FlightComponent } from './travel/flight/flight.component';
 import { HotelComponent } from './travel/hotel/hotel.component';
+import { RottenTomatoesComponent } from './rotten-tomatoes/rotten-tomatoes.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'customer',
+    component: CustomerComponent,
+  },
+  {
+    path: 'dashboard',
+    component: RottenTomatoesComponent,
   },
   {
     path: 'travel',
@@ -29,7 +39,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
