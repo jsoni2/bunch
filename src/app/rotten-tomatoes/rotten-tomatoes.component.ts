@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-rotten-tomatoes',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RottenTomatoesComponent implements OnInit {
 
-  constructor() { }
+  private apiurl = 'http://www.omdbapi.com/?i=tt3896198&apikey=58761096';
+  data: any = {};
+
+  constructor(private http: Http) {
+    this.getContent();
+    this.getData();
+   }
 
   ngOnInit() {
+  }
+
+  getData(){
+    return this.http.get(this.apiurl)
+      .map((res: Response) => res.json())
+  }
+
+  getContent(){
+    this.getData().subscribe(data => {
+
+      this.data = data;
+      console.log(this.data);
+    })
   }
 
 }
