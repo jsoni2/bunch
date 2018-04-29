@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { TravelComponent } from './travel/travel.component';
@@ -29,9 +29,11 @@ import { RottenTomatoesComponent } from './rotten-tomatoes/rotten-tomatoes.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
   ],
   providers: [
     AuthGuard,
+    RottenTomatoesComponent,
   ],
   bootstrap: [AppComponent]
 })
